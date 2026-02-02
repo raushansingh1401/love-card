@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For My Love ❤️</title>
+
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #ffe6eb, #fff);
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            color: #e6005c;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .buttons {
+            position: relative;
+            width: 300px;
+            height: 150px;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 18px;
+            padding: 15px 25px;
+            transition: all 0.2s ease;
+        }
+
+        #yes {
+            background-color: red;
+            color: white;
+            font-size: 22px;
+            position: absolute;
+            left: 20px;
+            top: 50px;
+        }
+
+        #no {
+            background-color: white;
+            color: black;
+            font-size: 14px;
+            position: absolute;
+            left: 180px;
+            top: 60px;
+        }
+
+        #celebration {
+            display: none;
+            margin-top: 30px;
+        }
+
+        #celebration img {
+            width: 300px;
+            border-radius: 15px;
+        }
+
+        .note {
+            position: absolute;
+            bottom: 15px;
+            font-size: 13px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Do you love Raushan Singh? 😊❤️</h1>
+
+    <div class="buttons">
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+    </div>
+
+    <div id="celebration">
+        <h2>I love you too 😘💖</h2>
+        <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Celebration">
+    </div>
+
+    <div class="note">Try clicking No 😈</div>
+
+    <script>
+        const noButton = document.getElementById("no");
+        const yesButton = document.getElementById("yes");
+        const celebration = document.getElementById("celebration");
+
+        // Make NO button run away
+        noButton.addEventListener("mouseover", () => {
+            const x = Math.random() * 200;
+            const y = Math.random() * 100;
+
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        });
+
+        // Show celebration on YES
+        yesButton.addEventListener("click", () => {
+            celebration.style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
